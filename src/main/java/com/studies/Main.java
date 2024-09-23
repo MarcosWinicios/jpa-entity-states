@@ -13,6 +13,12 @@ public class Main {
         Client c1 = clientService.findById(1);
         System.out.println(c1);
 
+        Client c2 = new Client(3, "Armazen Feliz");
+        clientService.create(c2);
+
+
+
+        clientService.close();
         entityManagerFactory.close();
     }
 }
