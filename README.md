@@ -1,6 +1,8 @@
+# jpa-entity-states
+
 ## Project crated to test the Entity management states of the JPA
 
-Reference: <image src="../../../docs/state-diagram.png">
+<img src="./docs/states-diagram.png"/>
 
 
-
+Reference: https://blog.algaworks.com/tutorial-jpa/
