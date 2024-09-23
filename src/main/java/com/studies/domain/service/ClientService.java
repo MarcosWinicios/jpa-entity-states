@@ -12,8 +12,16 @@ public class ClientService {
     }
 
     public Client findById(Integer id){
-        Client client = entityManager.find(Client.class, 1);
-        entityManager.close();
-        return client;
+        return entityManager.find(Client.class, 1);
+    }
+
+    public void create(Client  client){
+        entityManager.getTransaction().begin();
+        entityManager.persist(client);
+        entityManager.getTransaction().commit();
+    }
+
+    public void close(){
+        this.entityManager.close();
     }
 }
