@@ -12,6 +12,13 @@ public class Client {
     private Integer id;
     private String name;
 
+    public Client(){}
+
+    public Client(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "Client{" +
