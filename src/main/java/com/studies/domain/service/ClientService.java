@@ -21,6 +21,12 @@ public class ClientService {
         entityManager.getTransaction().commit();
     }
 
+    public void remove(Client client){
+        entityManager.getTransaction().begin();
+        entityManager.remove(client);
+        entityManager.getTransaction().commit();
+    }
+
     public void close(){
         this.entityManager.close();
     }

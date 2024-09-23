@@ -16,6 +16,7 @@ public class Main {
         Client c2 = new Client("Armazen Feliz");
         clientService.create(c2);
 
+        clientService.remove(c1);
         clientService.close();
         entityManagerFactory.close();
     }
