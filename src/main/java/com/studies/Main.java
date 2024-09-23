@@ -17,15 +17,13 @@ public class Main {
         Client c2 = clientService.save(new Client("Armazen Feliz"));
 
         //Atualizar cliente
-        c2.setName(c2.getName() + " atualizado");
-        clientService.save(c2);
+        c1.setName(c1.getName() + " atualizado");
+        clientService.save(c1);
 
         //Remover um cliente
         Client c3 = clientService.save(new Client("Cliente a ser excluído"));
         System.out.println(c3.toString());
         clientService.remove(c3);
-
-
 
         clientService.close();
         entityManagerFactory.close();
