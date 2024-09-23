@@ -12,13 +12,14 @@ public class ClientService {
     }
 
     public Client findById(Integer id){
-        return entityManager.find(Client.class, 1);
+        return entityManager.find(Client.class, id);
     }
 
-    public void create(Client  client){
+    public Client save(Client  client){
         entityManager.getTransaction().begin();
-        entityManager.persist(client);
+        client = entityManager.merge(client);
         entityManager.getTransaction().commit();
+        return client;
     }
 
     public void remove(Client client){
